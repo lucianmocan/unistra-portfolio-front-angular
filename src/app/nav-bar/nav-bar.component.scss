@@ -1,0 +1,48 @@
+
+@import "../../styles.scss";
+
+main {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 16px;
+    align-content: center;
+    background-color: $primary_background;
+    height: 3rem;
+    img {
+        width: 10rem;
+        height: 3rem;
+    }
+    ul {
+        display: flex;
+        list-style: none;
+        flex-direction: column;
+        border: 0;
+        padding: 0;
+
+        li {
+            img {
+                border: 0;
+                padding: 0;
+                width: 35px;
+                height: 20px;
+            }
+        }
+    }
+
+    
+    nav {
+        display: flex;
+        justify-content: right;
+        height: min-content;
+        color: $primary_text;
+        font-size: 1.5rem;
+        margin-top: 0.5rem;
+        p {
+            margin: 0;
+        }
+        menu {
+            list-style: none;
+            display: none;
+        }
+    }
+}
