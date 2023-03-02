@@ -1,14 +1,6 @@
 <main>
-    <ul>
-        <li>
-            <img src="assets/flags/france.png" alt="drapeau de la France">
-        </li>
-        <!-- <li>
-            <img src="assets/flags/uk.png" alt="drapeau des Royaumes-Uni">
-        </li>
-        <li>
-            <img src="assets/flags/ro.png" alt="drapeau de la Roumanie">
-        </li> -->
+    <ul #language_menu (click)="clickOnLanguageMenu($event)">
+        {{languageOptions}}
     </ul>
     <div>
         <img src="assets/logo_my/lucian-logos.png" alt="logo page web - un petit ordinateur portable et le titre du site: lucian">

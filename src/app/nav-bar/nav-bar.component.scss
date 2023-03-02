@@ -19,14 +19,22 @@ main {
         border: 0;
         padding: 0;
 
-        li {
-            img {
-                border: 0;
-                padding: 0;
-                width: 35px;
-                height: 20px;
+        a {
+            display: none;
+            li {
+                img {
+                    border: 0;
+                    padding: 0;
+                    width: 35px;
+                    height: 20px;
+                }
             }
         }
+
+        a:nth-child(1){
+            display: block;
+         }
+
     }
 
     
