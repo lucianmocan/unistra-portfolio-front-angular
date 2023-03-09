@@ -1,18 +1,33 @@
 <main>
-    <ul #language_menu (click)="clickOnLanguageMenu($event)">
-        {{languageOptions}}
-    </ul>
+        <ul #language_menu (click)="clickOnLanguageMenu($event)" 
+                           (mouseleave)="hideLanguageMenuOnMouseLeave($event)"
+                           (mouseenter)="showLanguageMenuOnMouseEnter($event)">
+            <a *ngIf="!clickedLangMenu" #language_option>
+                <li>
+                    <img src={{currentLang.flagSource}} alt={{currentLang.flagAltText}}>
+                </li>
+            </a>
+            <a *ngIf="clickedLangMenu">
+                <li *ngFor="let lang of langOptions" (click)="selectedLanguage(lang)">
+                    <img src={{lang.flagSource}} alt={{lang.flagAltText}}>
+                </li>
+            </a>
+        </ul>
     <div>
         <img src="assets/logo_my/lucian-logos.png" alt="logo page web - un petit ordinateur portable et le titre du site: lucian">
     </div>
-    <nav>
-        <p>menu</p>
-        <menu>
-            <li>Accueil</li>
-            <li>Mes projets</li>
-            <li>Mon parcours</li>
-            <li>Mes passions</li>
-            <li>Contact</li>
+    <nav (mouseleave)="hideMenuOnMouseLeave($event)"
+         (mouseenter)="showMenuOnMouseEnter($event)">
+        <p (click)="clickOnMenu($event)">
+           menu</p>
+        <menu *ngIf="clickedMenu">
+            <ul>
+                <li>Accueil</li>
+                <li>Projets</li>
+                <li>Parcours</li>
+                <li>Passions</li>
+                <li>Contact</li>
+            </ul>
         </menu>
     </nav>
 </main>

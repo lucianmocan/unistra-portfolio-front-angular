@@ -1,62 +1,103 @@
 import { AfterViewInit, Component, ElementRef, OnInit, QueryList, Renderer2, ViewChild, ViewChildren } from '@angular/core';
 
+interface FlagLanguage {
+  flagSource: String;
+  flagAltText: String;
+}
+
 @Component({
   selector: 'app-nav-bar',
   templateUrl: './nav-bar.component.html',
   styleUrls: ['./nav-bar.component.scss']
 })
-export class NavBarComponent implements OnInit, AfterViewInit{
 
-  languageOptions : Array<String> = [];
+export class NavBarComponent implements OnInit{
+
+  langOptions: Array<FlagLanguage> = [];
+  clickedLangMenu : boolean = false;
   clickedMenu : boolean = false;
-  @ViewChild('language_menu') language_menu! : ElementRef;
-  // @ViewChildren('language_option') languageOptions! : QueryList<ElementRef<{nativeElement: HTMLElement}>>;
 
-  constructor(
-    private renderer : Renderer2, 
-  ){}
+  constructor(){}
+  
+  frenchLang : FlagLanguage = {
+    flagAltText : "drapeau de la France",
+    flagSource: "assets/flags/france.png"
+  }
 
-  languageOptionsTabInit(){
-    this.languageOptions[0] = '<a #language_option href="#"><li><img src="assets/flags/france.png" alt="drapeau de la France"></li></a>';
-    this.languageOptions[1] = '<a #language_option href="#"><li><img src="assets/flags/uk.png" alt="drapeau des Royaumes-Uni"></li></a>';
-    this.languageOptions[2] = '<a #language_option href="#"><li><img src="assets/flags/ro.png" alt="drapeau de la Roumanie"></li></a>';
-    this.renderer.appendChild(this.language_menu, this.languageOptions[0]);
+  englishLang : FlagLanguage = {
+    flagAltText : "United Kingdom's Flag",
+    flagSource: "assets/flags/uk.png"
+  }
+
+  roLang : FlagLanguage = {
+    flagAltText : "Drapelul României",
+    flagSource: "assets/flags/ro.png"
+  }
+  
+  currentLang : FlagLanguage = this.frenchLang;
+  languageOnInit(){
+    this.langOptions.push(this.frenchLang, this.englishLang, this.roLang);
   }
 
   ngOnInit(): void {
-    this.languageOptionsTabInit();
+    this.languageOnInit();
+  }
+  
+  selectedLanguage(lang: FlagLanguage){
+    this.currentLang = lang;
+    let index = 0;
+    for (let i = 0; i < this.langOptions.length; i++){
+      if (this.langOptions[i].flagSource == lang.flagSource){
+        index = i;
+        break;
+      }
+    }
+    if (index != 0){
+      let tmp = this.langOptions[0];
+      this.langOptions[0] = lang;
+      this.langOptions[index] = tmp;
+    }
   }
 
-  ngAfterViewInit(): void {
-
-  }
-
-
-  clickOnLanguageMenu(event: Event){
-      if (!this.clickedMenuCheck()){
-        this.displayLanguageMenu();
-      }
-      else {
-        this.hideLanguageMenu();
-      }
+  clickedLangMenuCheck(){
+    this.clickedLangMenu = !this.clickedLangMenu;
+    return !this.clickedLangMenu; 
   }
 
   clickedMenuCheck(){
-    this.setClicked();
+    this.clickedMenu = !this.clickedMenu;
     return !this.clickedMenu; 
   }
 
-  setClicked(){
-      this.clickedMenu = !this.clickedMenu;
+  hideLanguageMenuOnMouseLeave(event: Event){
+    this.clickedLangMenu = false;
+  }
+  showLanguageMenuOnMouseEnter(event: Event){
+    this.clickedLangMenu = true;
   }
 
-  displayLanguageMenu(){
-    // this.renderer.setStyle(this.languageOptions.toArray()[1].nativeElement, "display", "block");
-    // this.renderer.setStyle(this.languageOptions.toArray()[2].nativeElement, "display", "block");
+  clickOnLanguageMenu(event: Event){
+    if (!this.clickedLangMenuCheck()){
+      this.clickedLangMenu = true;
+    }
+    else {
+      this.clickedLangMenu = false;
+    }
+}
+  clickOnMenu(event: Event){
+    if (!this.clickedMenuCheck()){
+      this.clickedMenu = true;
+    }
+    else {
+      this.clickedMenu = false;
+    }
   }
 
-  hideLanguageMenu(){
-    // this.renderer.setStyle(this.languageOptions.toArray()[1].nativeElement, "display", "none");
-    // this.renderer.setStyle(this.languageOptions.toArray()[2].nativeElement, "display", "none");
+  hideMenuOnMouseLeave(event: Event){
+    this.clickedMenu = false;
   }
+  showMenuOnMouseEnter(event: Event){
+    this.clickedMenu = true;
+  }
+
 }
