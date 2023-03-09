@@ -1,8 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 $primary_background: #E0C590;
 $primary_text: #1B3159;
-
+$primary_font_family: Abril Fatface;
 body{
-    font-family: Abril Fatface;
+    font-family: $primary_font_family;
     margin: 0;
 }
