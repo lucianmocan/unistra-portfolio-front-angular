@@ -1,0 +1,59 @@
+@import "../../styles.scss";
+
+main {
+    
+    section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 2rem;
+        img {
+            width: 10rem;
+            height: 10rem;
+        }
+        h1 {
+            margin-top: 1rem;
+            margin-bottom : 0rem;
+            color: $primary_text;
+        }
+        h2 {
+            margin-top: 0.5rem;
+            font-size: 1.2rem;
+        }
+        p {
+            text-align: center;
+            font-family: 'Avenir Next';
+            width: 10.7rem;
+            font-size: 0.78rem;
+        }
+    }
+
+    nav {
+        margin-top: -1rem;
+        section {
+            display: flex;
+            gap: 1.8rem;
+            button {
+                cursor: pointer;
+                background-color: $primary_background;
+                border-radius: 100px;
+                padding: 0.4rem 2rem 0.4rem 2rem;
+                color: $primary_text;
+                font-family: $primary_font_family;
+                font-size: 1.1rem;
+                border: none;
+            }
+        }
+        footer {
+            margin-top: 2.2rem;
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            align-items: center;
+            a {
+                cursor: pointer;
+            }
+        }
+    }
+}
