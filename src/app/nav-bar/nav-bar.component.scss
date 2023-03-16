@@ -2,6 +2,7 @@
 @import "../../styles.scss";
 
 main {
+    z-index: 3;
     display: flex;
     justify-content: space-between;
     align-content: center;
@@ -54,7 +55,17 @@ main {
             margin: 0;
             border: 0;
             cursor: pointer;
+            background: $primary_background;
+
+            background: linear-gradient(to right, $primary-background 50%, lightblue 50%) left;
+            background-size: 200%;
+            transition: .5s ease-out;
+
         }
+        p:hover {
+            background-position: right;
+        }
+        
         menu {
             padding: 0;
             border: 0;
@@ -68,14 +79,21 @@ main {
                     cursor: pointer;
                     padding: 0.4rem 0.5rem 0.4rem 0.5rem;
                     text-align: center;
+                    background: $primary_background;
+
+                    background: linear-gradient(to right, $primary-background 50%, lightblue 50%) left;
+                    background-size: 200%;
+                    transition: .5s ease-out;
+                }
+                li:hover {
+                    background-position: right;
                 }
             }
         }
     }
 }
 
-
-li, p{
+li{
     background: $primary_background;
 
     background: linear-gradient(to left, $primary-background 50%, lightblue 50%) right;
@@ -83,7 +101,7 @@ li, p{
     transition: .5s ease-out;
 }
 
-li:hover, p:hover {
+li:hover {
     background-position: left;
 }
 

@@ -22,11 +22,11 @@
            menu</p>
         <menu *ngIf="clickedMenu">
             <ul>
-                <li>Accueil</li>
+                <li routerLink="/home" routerLinkActive="active" ariaCurrentWhenActive="page">Accueil</li>
                 <li>Projets</li>
                 <li>Parcours</li>
                 <li>Passions</li>
-                <li>Contact</li>
+                <li routerLink="/contact" routerLinkActive="active" ariaCurrentWhenActive="page">Contact</li>
             </ul>
         </menu>
     </nav>
