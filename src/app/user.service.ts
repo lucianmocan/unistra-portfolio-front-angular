@@ -7,10 +7,10 @@ import { User } from './user';
   providedIn: 'root'
 })
 export class UserService {
-  private userUrl = '127.0.0.1:8000';
+  private userUrl = 'http://127.0.0.1:8000';
 
   httpOptions = {
-    headers: new HttpHeaders({'Content-Type': 'application/json'})
+    headers: new HttpHeaders({'Content-Type': 'text', 'Response-Type': 'text'})
   };
 
   constructor(
