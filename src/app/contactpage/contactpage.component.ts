@@ -1,5 +1,4 @@
-import { HttpClient } from '@angular/common/http';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { User } from '../user';
 import { UserService } from '../user.service';
 
@@ -9,7 +8,7 @@ import { UserService } from '../user.service';
   styleUrls: ['./contactpage.component.scss']
 })
 
-export class ContactpageComponent {
+export class ContactpageComponent implements OnInit{
   user : User = { 
     firstName: "", 
     lastName: "",
@@ -18,10 +17,15 @@ export class ContactpageComponent {
   }
 
   constructor(
-    private http: HttpClient, 
     private userService : UserService)
     { }
 
+    users : User[] = [];
+
+    ngOnInit(){
+      this.userService.getUsers()
+      .subscribe(users => this.users = users);
+    }
 
     submitContact(){
       this.userAdd();
