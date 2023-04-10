@@ -1,0 +1,41 @@
+{
+    "navbar":{
+        "logo_alt": "logo page web - un petit ordinateur portable et le titre du site: lucian",
+        "menu":{
+            "name":"menu",
+            "list":{
+                "home": "Accueil", 
+                "projects": "Projets", 
+                "edxp": "Parcours",
+                "passions": "Passions",
+                "contact": "Contact"
+            }
+        }
+    },
+    "homepage":{
+        "avatar_alt": "Illustration d'une personne.",
+        "h1": "Qui suis-je ?",
+        "p": "Je suis étudiant en 2ème année de Licence Informatique à l'Université de Strasbourg.",
+        "btn1": "Mes projets", 
+        "btn2": "Mes hobbys"
+    },
+    "contactpage":{
+        "fname": {
+            "fname": "Prénom", 
+            "placeholder": "Votre prénom ici.."
+        },
+        "lname": {
+            "lname": "Nom", 
+            "placeholder": "Votre nom ici.."
+        },
+        "email": {
+            "email": "Email", 
+            "placeholder": "Votre adresse email ici.."
+        },
+        "subject": {
+            "subject": "Sujet", 
+            "placeholder": "Écrire votre message.."
+        },
+        "sendbtn": "Envoyer"
+    }
+}

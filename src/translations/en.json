@@ -1,0 +1,41 @@
+{
+    "navbar":{
+        "logo_alt": "Small laptop next to the website's name: lucian",
+        "menu":{
+            "name":"menu",
+            "list":{
+                "home": "Home", 
+                "projects": "Projects", 
+                "edxp": "Background",
+                "passions": "Passions",
+                "contact": "Contact"
+            }
+        }
+    },
+    "homepage":{
+        "avatar_alt": "Illustration of a guy.",
+        "h1": "Who am I ?",
+        "p": "I'm a 2nd year student in Computer Science at the University of Strasbourg.",
+        "btn1": "My projects", 
+        "btn2": "My hobbies"
+    },
+    "contactpage":{
+        "fname": {
+            "fname": "First name", 
+            "placeholder": "Type your first name here..."
+        },
+        "lname": {
+            "lname": "Last name", 
+            "placeholder": "Type your last name here..."
+        },
+        "email": {
+            "email": "Email", 
+            "placeholder": "Type your email address here..."
+        },
+        "subject": {
+            "subject": "Subject", 
+            "placeholder": "Type your message here..."
+        },
+        "sendbtn": "Submit"
+    }
+}

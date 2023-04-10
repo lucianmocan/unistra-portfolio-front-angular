@@ -1,0 +1,41 @@
+{
+    "navbar":{
+        "logo_alt": "un mic laptop și numele website-ului: lucian",
+        "menu":{
+            "name":"meniu",
+            "list":{
+                "home": "Acasă", 
+                "projects": "Proiecte", 
+                "edxp": "Parcurs",
+                "passions": "Pasiuni",
+                "contact": "Contact"
+            }
+        }
+    },
+    "homepage":{
+        "avatar_alt": "Ilustrație a unei persoane.",
+        "h1": "Cine sunt eu?",
+        "p": "Sunt student în al doilea an de licență în Informatică la Universitatea din Strasbourg.",
+        "btn1": "Proiectele mele", 
+        "btn2": "Pasiunile mele"
+    },
+    "contactpage":{
+        "fname": {
+            "fname": "Prenume", 
+            "placeholder": "Indicați prenumele dumneavoastră.."
+        },
+        "lname": {
+            "lname": "Nume", 
+            "placeholder": "Indicați numele dumneavoastră.."
+        },
+        "email": {
+            "email": "Email", 
+            "placeholder": "Adresa dumneavoastră email.."
+        },
+        "subject": {
+            "subject": "Subiect", 
+            "placeholder": "Scrieți mesajul dumneavoastră.."
+        },
+        "sendbtn": "Trimite"
+    }
+}
