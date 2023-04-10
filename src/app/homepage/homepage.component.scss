@@ -1,52 +1,55 @@
 @import "../../styles.scss";
 
 main {
-    
     section {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        margin-top: 2rem;
+        margin-top: 1rem;
+        margin-bottom: 0;
+        gap: 0.3rem;
         img {
-            width: 10rem;
-            height: 10rem;
+            width: 15rem;
+            height: 15rem;
         }
         h1 {
-            margin-top: 1rem;
+            font-size: 2.3rem;
+            margin-top: 0.2rem;
             margin-bottom : 0rem;
             color: $primary_text;
         }
         h2 {
-            margin-top: 0.5rem;
-            font-size: 1.2rem;
+            margin-top: 0rem;
+            font-size: 1.8rem;
         }
         p {
+            margin-top: -1rem;
             text-align: center;
             font-family: 'Avenir Next';
-            width: 10.7rem;
-            font-size: 0.78rem;
+            width: 16rem;
+            font-size: 1.2rem;
+            margin-bottom: 0.3rem;
         }
     }
 
     nav {
-        margin-top: -1rem;
         section {
             display: flex;
-            gap: 1.8rem;
+            gap: 1.2rem;
             button {
                 cursor: pointer;
                 background-color: $primary_background;
                 border-radius: 100px;
-                padding: 0.4rem 2rem 0.4rem 2rem;
+                padding: 0.2rem 2rem 0.2rem 2rem;
                 color: $primary_text;
                 font-family: $primary_font_family;
-                font-size: 1.1rem;
+                font-size: 1.8rem;
                 border: none;
             }
         }
         footer {
-            margin-top: 2.2rem;
+            margin-top: 2rem;
             display: flex;
             gap: 1rem;
             justify-content: center;

@@ -2,7 +2,6 @@
 @import "../../styles.scss";
 
 main {
-    z-index: 3;
     display: flex;
     justify-content: space-between;
     align-content: center;
@@ -14,49 +13,58 @@ main {
         height: 3rem;
     }
     ul {
+        z-index: 1;
         display: flex;
         list-style: none;
         flex-direction: column;
         border: 0;
         margin-top: 0;
+        margin-bottom: 0;
         padding: 0;
-        gap: 2rem;
-
         a {
-            z-index: 1;
+            margin: 0;
+            cursor: pointer;
             li {
-                padding: 0.9rem 1.4rem 0.7rem 1.55rem;
+                display: flex;
+                gap: 0.3rem;
+                padding: 1rem 1.4rem 1.05rem 1.55rem;
                 img {
-
                     border: 0;
                     width: 27px;
                     height: 15px;
+                }
+                p {
+                    width: 3.5rem;
+                    color: $primary_text;
+                    margin: 0;
+                    padding: 0;
+                    border: 0;
+                    line-height: 15px;
                 }
             }
         }
 
     }
-
+    div {
+        margin-left: -3.5rem;
+    }
     
     nav {
-        margin-left: -2.5rem;
-        display: flex;
-        flex-direction: column;
+        z-index: 1;
+        margin-left: -5rem;
         color: $primary_text;
-        gap: 0;
-        width: 6.3rem;
+        width: 8rem;
         p {
-            font-size: 1.2rem;
+            font-size: 1.5rem;
             padding-left: 0.5rem;
-            padding-right: 0.5rem;
-            padding-top: 0.6rem;
-            padding-bottom: 0.77rem;
+            padding-right: 0.1rem;
+            padding-top: 0.4rem;
+            padding-bottom: 0.52rem;
             text-align: center;
             margin: 0;
             border: 0;
             cursor: pointer;
             background: $primary_background;
-
             background: linear-gradient(to right, $primary-background 50%, lightblue 50%) left;
             background-size: 200%;
             transition: .5s ease-out;
@@ -72,12 +80,13 @@ main {
             margin: 0;
             list-style: none;
             ul {
+                font-size: 1.5rem;
                 display: flex;
                 flex-direction: column;
                 gap: 0;
                 li {
                     cursor: pointer;
-                    padding: 0.4rem 0.5rem 0.4rem 0.5rem;
+                    padding: 0.4rem 1rem 0.4rem 1rem;
                     text-align: center;
                     background: $primary_background;
 
@@ -103,8 +112,4 @@ li{
 
 li:hover {
     background-position: left;
-}
-
-img {
-    cursor: pointer;
 }
