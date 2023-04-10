@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from '../user';
 import { UserService } from '../user.service';
+import { TranslateService } from '../translate.service';
 
 @Component({
   selector: 'app-contactpage',
@@ -17,6 +18,7 @@ export class ContactpageComponent implements OnInit{
   }
 
   constructor(
+    public translation: TranslateService,
     private userService : UserService)
     { }
 

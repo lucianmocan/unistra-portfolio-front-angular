@@ -1,8 +1,11 @@
 import { AfterViewInit, Component, ElementRef, OnInit, QueryList, Renderer2, ViewChild, ViewChildren } from '@angular/core';
+import { TranslateService } from '../translate.service';
 
 interface FlagLanguage {
-  flagSource: String;
-  flagAltText: String;
+  code: string;
+  flagName: string;
+  flagSource: string;
+  flagAltText: string;
 }
 
 @Component({
@@ -17,19 +20,25 @@ export class NavBarComponent implements OnInit{
   clickedLangMenu : boolean = false;
   clickedMenu : boolean = false;
 
-  constructor(){}
+  constructor(public translation: TranslateService){}
   
   frenchLang : FlagLanguage = {
+    code: "fr",
+    flagName: "Français",
     flagAltText : "drapeau de la France",
     flagSource: "assets/flags/france.png"
   }
 
   englishLang : FlagLanguage = {
+    code: "en",
+    flagName: "English",
     flagAltText : "United Kingdom's Flag",
     flagSource: "assets/flags/uk.png"
   }
 
   roLang : FlagLanguage = {
+    code: "ro",
+    flagName: "Română",
     flagAltText : "Drapelul României",
     flagSource: "assets/flags/ro.png"
   }
@@ -53,6 +62,7 @@ export class NavBarComponent implements OnInit{
       }
     }
     if (index != 0){
+      this.translation.getLanguage(lang.code);
       let tmp = this.langOptions[0];
       this.langOptions[0] = lang;
       this.langOptions[index] = tmp;
@@ -92,7 +102,7 @@ export class NavBarComponent implements OnInit{
       this.clickedMenu = false;
     }
   }
-
+  
   hideMenuOnMouseLeave(event: Event){
     this.clickedMenu = false;
   }
