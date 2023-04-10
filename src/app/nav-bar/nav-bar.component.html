@@ -1,32 +1,41 @@
 <main>
-        <ul #language_menu (click)="clickOnLanguageMenu($event)" 
+        <ul #language_menu (click)="clickOnLanguageMenu($event)"
                            (mouseleave)="hideLanguageMenuOnMouseLeave($event)"
                            (mouseenter)="showLanguageMenuOnMouseEnter($event)">
             <a *ngIf="!clickedLangMenu" #language_option>
                 <li>
-                    <img src={{currentLang.flagSource}} alt={{currentLang.flagAltText}}>
+                    <img src={{currentLang.flagSource}} alt={{currentLang.flagAltText}}><p>{{currentLang.flagName}}</p>
                 </li>
             </a>
             <a *ngIf="clickedLangMenu">
                 <li *ngFor="let lang of langOptions" (click)="selectedLanguage(lang)">
-                    <img src={{lang.flagSource}} alt={{lang.flagAltText}}>
+                    <img src={{lang.flagSource}} alt={{lang.flagAltText}}><p>{{lang.flagName}}</p>
                 </li>
             </a>
         </ul>
     <div>
-        <img src="assets/logo_my/lucian-logos.png" alt="logo page web - un petit ordinateur portable et le titre du site: lucian">
+        <img src="assets/logo_my/lucian-logos.png" alt={{this.translation.languagePack.navbar.logo_alt}}>
     </div>
     <nav (mouseleave)="hideMenuOnMouseLeave($event)"
-         (mouseenter)="showMenuOnMouseEnter($event)">
-        <p (click)="clickOnMenu($event)">
-           menu</p>
+         (mouseenter)="showMenuOnMouseEnter($event)"
+         (click)="clickOnMenu($event)">
+        <p>
+            {{this.translation.languagePack.navbar.menu.name}}</p>
         <menu *ngIf="clickedMenu">
             <ul>
-                <li routerLink="/home" routerLinkActive="active" ariaCurrentWhenActive="page">Accueil</li>
-                <li>Projets</li>
-                <li>Parcours</li>
-                <li>Passions</li>
-                <li routerLink="/contact" routerLinkActive="active" ariaCurrentWhenActive="page">Contact</li>
+                <li routerLink="/home" 
+                    routerLinkActive="active" 
+                    ariaCurrentWhenActive="page">
+                    {{this.translation.languagePack.navbar.menu.list.home}}
+                </li>
+                <li>{{this.translation.languagePack.navbar.menu.list.projects}}</li>
+                <li>{{this.translation.languagePack.navbar.menu.list.edxp}}</li>
+                <li>{{this.translation.languagePack.navbar.menu.list.passions}}</li>
+                <li routerLink="/contact" 
+                    routerLinkActive="active" 
+                    ariaCurrentWhenActive="page">
+                    {{this.translation.languagePack.navbar.menu.list.contact}}
+                </li>
             </ul>
         </menu>
     </nav>
