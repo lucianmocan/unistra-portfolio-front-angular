@@ -1,0 +1,16 @@
+
+<main>
+<table *ngFor="let user of users; let i = index">
+<tr>
+    <td><b>Nr.</b> {{i}}</td>
+    <td><b>First name:</b> {{user.firstName}}</td>
+    <td><b>Last name:</b> {{user.lastName}}</td>
+</tr>
+<tr>
+    <td colspan="3"><b>Email:</b> {{user.email}}</td>
+</tr>
+<tr>
+    <td colspan="3"><b>Content:</b> {{user.content}}</td>
+</tr>
+</table>
+</main>
