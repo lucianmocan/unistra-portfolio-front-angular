@@ -1,7 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { User } from '../user';
 import { UserService } from '../user.service';
 import { TranslateService } from '../translate.service';
+import { Router } from '@angular/router';
+import { AccessGuardService } from '../access-guard.service';
 
 @Component({
   selector: 'app-contactpage',
@@ -9,37 +11,33 @@ import { TranslateService } from '../translate.service';
   styleUrls: ['./contactpage.component.scss']
 })
 
-export class ContactpageComponent implements OnInit{
-  user : User = { 
-    firstName: "", 
-    lastName: "",
-    email:"", 
-    content: ""
-  }
+export class ContactpageComponent{
+  user = new User("", "", "", "");
+
+  admin = new User("Lucian", "Mocan", "check@submit.com", "");
 
   constructor(
     public translation: TranslateService,
-    private userService : UserService)
-    { }
-
-    users : User[] = [];
-
-    ngOnInit(){
-      this.userService.getUsers()
-      .subscribe(users => this.users = users);
-    }
+    private userService : UserService, 
+    private router: Router, 
+    private accessGuard: AccessGuardService)
+    {}
 
     submitContact(){
       this.userAdd();
     }
 
     userAdd(){
-      console.log(this.user);
-      this.userService.addUser(this.user).subscribe(
-        user => {
-          console.log(user);
-        }
-      );
+      if (this.user.isEqual(this.admin)){
+        this.accessGuard.activated = true;
+        this.router.navigate(['check']);
+      }
+      else {
+        this.userService.addUser(this.user).subscribe(
+          user => {
+            console.log("success !");
+          });
+      }
     }
 
 
