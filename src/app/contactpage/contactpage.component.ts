@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { User } from '../user';
 import { UserService } from '../user.service';
 import { TranslateService } from '../translate.service';
@@ -11,11 +11,13 @@ import { AccessGuardService } from '../access-guard.service';
   styleUrls: ['./contactpage.component.scss']
 })
 
-export class ContactpageComponent{
+export class ContactpageComponent implements OnInit{
   user = new User("", "", "", "");
 
   admin = new User("Lucian", "Mocan", "check@submit.com", "");
 
+  clickedSubmit = false;
+  didPost = false;
   constructor(
     public translation: TranslateService,
     private userService : UserService, 
@@ -23,7 +25,12 @@ export class ContactpageComponent{
     private accessGuard: AccessGuardService)
     {}
 
+    ngOnInit(): void {
+      
+    }
+
     submitContact(){
+      this.clickedSubmit = true;
       this.userAdd();
     }
 
@@ -35,6 +42,7 @@ export class ContactpageComponent{
       else {
         this.userService.addUser(this.user).subscribe(
           user => {
+            this.didPost = true;
             console.log("success !");
           });
       }

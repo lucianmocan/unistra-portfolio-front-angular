@@ -3,23 +3,52 @@
         <div>
             <div>
                 <label for="fname">{{this.translation.languagePack.contactpage.fname.fname}}</label>
-                <input type="text" [(ngModel)] = "user.firstName" id="fname" name="firstname" placeholder={{this.translation.languagePack.contactpage.fname.placeholder}}>
+                <input type="text" [(ngModel)] = "user.firstName" id="fname" name="firstname" placeholder={{this.translation.languagePack.contactpage.fname.placeholder}} #fname="ngModel" required minlength="1">
+                <div *ngIf="fname.invalid && (fname.touched || this.clickedSubmit)">
+                    <div *ngIf="fname.errors?.['required']">
+                        {{this.translation.languagePack.contactpage.errors.required}}
+                    </div>
+                    <div *ngIf="fname.errors?.['minlength']">
+                        {{this.translation.languagePack.contactpage.errors.length}}
+                    </div>
+                </div>
             </div>
             <div>
                 <label for="lname">{{this.translation.languagePack.contactpage.lname.lname}}</label>
-                <input type="text" [(ngModel)] = "user.lastName" id="lname" name="lastname" placeholder={{this.translation.languagePack.contactpage.lname.placeholder}}>
+                <input type="text" [(ngModel)] = "user.lastName" id="lname" name="lastname" placeholder={{this.translation.languagePack.contactpage.lname.placeholder}} #lname="ngModel" required minlength="1">
+                <div *ngIf="lname.invalid && (lname.touched || this.clickedSubmit)">
+                    <div *ngIf="lname.errors?.['required']">
+                        {{this.translation.languagePack.contactpage.errors.required}}
+                    </div>
+                    <div *ngIf="lname.errors?.['minlength']">
+                        {{this.translation.languagePack.contactpage.errors.length}}
+                    </div>
+                </div>
             </div>
             <div>
                 <label for="email">{{this.translation.languagePack.contactpage.email.email}}</label>
-                <input type="email" [(ngModel)] = "user.email" id="email" name="email" placeholder={{this.translation.languagePack.contactpage.email.placeholder}}>
+                <input type="email" [(ngModel)] = "user.email" id="email" name="email" placeholder={{this.translation.languagePack.contactpage.email.placeholder}} #email="ngModel" email="true" required pattern="^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$">
+                <div *ngIf="email.invalid && (email.touched || this.clickedSubmit)">
+                    <div *ngIf="email.errors?.['email'] || email.errors?.['pattern']">
+                        {{this.translation.languagePack.contactpage.errors.email}}
+                    </div>
+                    <div *ngIf="email.errors?.['required']">
+                        {{this.translation.languagePack.contactpage.errors.required}}
+                    </div>
+                </div>
             </div>
         </div>
 
         
         <label for="subject">{{this.translation.languagePack.contactpage.subject.subject}}</label>
-        <textarea id="subject" [(ngModel)] = "user.content" name="subject" placeholder={{this.translation.languagePack.contactpage.subject.placeholder}}></textarea>
+        <textarea id="subject" [(ngModel)] = "user.content" name="subject" placeholder={{this.translation.languagePack.contactpage.subject.placeholder}} #subject="ngModel" required></textarea>
+        <div *ngIf="subject.invalid && (this.clickedSubmit || subject.touched)">
+            <div *ngIf="subject.errors?.['required']">
+                {{this.translation.languagePack.contactpage.errors.required}}
+            </div>
+        </div>
+        <button *ngIf="!this.didPost" type="submit">{{this.translation.languagePack.contactpage.sendbtnT}}</button>
+        <button *ngIf="this.didPost">{{this.translation.languagePack.contactpage.sendbtnS}}</button>
 
-        <button type="submit">{{this.translation.languagePack.contactpage.sendbtn}}</button>
     </form>
-        <!-- {{this.users | json}} -->
 </main>
