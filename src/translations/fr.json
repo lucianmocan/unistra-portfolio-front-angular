@@ -36,6 +36,12 @@
             "subject": "Sujet", 
             "placeholder": "Écrire votre message.."
         },
-        "sendbtn": "Envoyer"
+        "sendbtnT": "Envoyer",
+        "sendbtnS": "Envoyé !",
+        "errors": {
+            "length": "Champs doit avoir au moins un caractère.",
+            "required": "Merci de remplir cette boîte.",
+            "email": "Format d'adresse email incorrect." 
+        }
     }
 }

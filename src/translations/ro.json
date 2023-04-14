@@ -36,6 +36,12 @@
             "subject": "Subiect", 
             "placeholder": "Scrieți mesajul dumneavoastră.."
         },
-        "sendbtn": "Trimite"
+        "sendbtnT": "Trimite",
+        "sendbtnS": "Trimis !",
+        "errors": {
+            "length": "Acest câmp trebuie să conțină cel puțin un caracter.",
+            "required": "Această linie trebuie completată.",
+            "email": "Format incorect pentru adresa de email." 
+        }
     }
 }

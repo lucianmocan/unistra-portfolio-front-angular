@@ -6,7 +6,7 @@
             "list":{
                 "home": "Home", 
                 "projects": "Projects", 
-                "edxp": "Background",
+                "edxp": "Career",
                 "passions": "Passions",
                 "contact": "Contact"
             }
@@ -36,6 +36,12 @@
             "subject": "Subject", 
             "placeholder": "Type your message here..."
         },
-        "sendbtn": "Submit"
+        "sendbtnT": "Submit",
+        "sendbtnS": "Sent !",
+        "errors": {
+            "length": "Field should be longer than 1 character.",
+            "required": "This box has to be filled.",
+            "email": "Incorrect email format." 
+        }
     }
 }
