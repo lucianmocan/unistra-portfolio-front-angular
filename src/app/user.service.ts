@@ -1,6 +1,6 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, catchError, throwError } from 'rxjs';
 import { User } from './user';
 
 @Injectable({
@@ -12,13 +12,20 @@ export class UserService {
   private getUsersUrl = this.userUrl + "getcontacts.php";
 
   httpOptions = {
-    headers: new HttpHeaders({'Content-Type': 'application/json', 'Response-Type': 'application/json'})
-  };
+    headers: new HttpHeaders({'Content-Type': 'application/json', 'Response-Type': 'application/json'}),
+    params: new HttpParams()
+  }; 
+
+  
 
   constructor(
     private http: HttpClient
   ) { }
 
+  getUserById(id: string): Observable<User> {
+    this.httpOptions.params= new HttpParams().set('id', id);
+    return this.http.get<User>(this.getUsersUrl, this.httpOptions);
+  }
   getUsers(): Observable<User[]> {
     return this.http.get<User[]>(this.getUsersUrl);
   }
