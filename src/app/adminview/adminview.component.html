@@ -1,16 +1,33 @@
 
 <main>
-<table *ngFor="let user of users; let i = index">
-<tr>
-    <td><b>Nr.</b> {{i}}</td>
-    <td><b>First name:</b> {{user.firstName}}</td>
-    <td><b>Last name:</b> {{user.lastName}}</td>
-</tr>
-<tr>
-    <td colspan="3"><b>Email:</b> {{user.email}}</td>
-</tr>
-<tr>
-    <td colspan="3"><b>Content:</b> {{user.content}}</td>
-</tr>
-</table>
+<section>
+    <fieldset>
+        <div>
+            <label for="all">General Search: </label>
+            <input type="radio" id="all" name="search" value="all" [(ngModel)]="search.choice">
+        </div>
+        <div>
+            <label for="id">Search by ID: </label>
+            <input type="radio" id="id" name="search" value="id" [(ngModel)]="search.choice">
+            <input type="text" id="sbox" [(ngModel)]="search.value">
+        </div>
+        <button (click)="searchAction()">Search</button>
+    </fieldset>
+</section>
+<div *ngFor="let user of users; let i = index">
+    <div>
+        <p *ngIf="users.length > 1"><b>ID</b> {{i}}</p>
+        <p *ngIf="users.length == 1"><b>ID</b> {{user.id}}</p> 
+        <p><b>First name:</b> {{user.firstName}}</p>
+        <p><b>Last name:</b> {{user.lastName}}</p>
+        <p><b>Email:</b> {{user.email}}</p>
+    </div>
+    <div>
+        <p><b>Content:</b> {{user.content}}</p>
+    </div>
+    <div>
+        <button>Update</button>
+        <button>Delete</button>
+    </div>
+</div>
 </main>
