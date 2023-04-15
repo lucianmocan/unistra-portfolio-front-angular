@@ -1,6 +1,6 @@
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, catchError, throwError } from 'rxjs';
+import { Observable } from 'rxjs';
 import { User } from './user';
 
 @Injectable({
@@ -10,6 +10,8 @@ export class UserService {
   private userUrl = 'http://localhost:8000/';
   private addUserUrl = this.userUrl + "addcontact.php";
   private getUsersUrl = this.userUrl + "getcontacts.php";
+  private deleteUsersUrl = this.userUrl + "deletecontact.php";
+  private updateUsersUrl = this.userUrl + "updatecontact.php";
 
   httpOptions = {
     headers: new HttpHeaders({'Content-Type': 'application/json', 'Response-Type': 'application/json'}),
@@ -34,5 +36,13 @@ export class UserService {
     return this.http.post<User>(this.addUserUrl, user, this.httpOptions);
   }
 
+  deleteUserByID(id: string): Observable<User>{
+    this.httpOptions.params = new HttpParams().set('id', id);
+    return this.http.post<User>(this.deleteUsersUrl, this.httpOptions);
+  }
+
+  updateUser(user: User): Observable<User>{
+    return this.http.post<User>(this.updateUsersUrl, user, this.httpOptions);
+  }
 
 }
