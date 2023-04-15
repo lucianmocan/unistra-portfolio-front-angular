@@ -1,6 +1,7 @@
 @import "../../styles.scss";
 main {
     margin-top: 2rem;
+    margin-bottom: 1rem;
     form {
         z-index: 2;
         display: flex;
@@ -23,22 +24,23 @@ main {
                     height: 1.8rem;
                     font-size: 1.5rem;
                 }
+                textarea {
+                    font-family: $secondary_font_family;
+                    font-size: 1.5rem;
+                    height: 10rem;
+                }
+        
                 div {
                     color:red;
                     font-size: 1.2rem;
                 }
             }
         }
-        textarea {
-            font-family: $secondary_font_family;
-            font-size: 1.5rem;
-            height: 10rem;
-        }
         button {
             font-size: 1.5rem;
             font-family: $secondary_font_family;
         }
-        div:nth-child(4){
+        div:nth-child(5){
             color: red;
             font-size: 1.2rem;
         }

@@ -37,16 +37,17 @@
                     </div>
                 </div>
             </div>
-        </div>
-
-        
-        <label for="subject">{{this.translation.languagePack.contactpage.subject.subject}}</label>
-        <textarea id="subject" [(ngModel)] = "user.content" name="subject" placeholder={{this.translation.languagePack.contactpage.subject.placeholder}} #subject="ngModel" required></textarea>
-        <div *ngIf="subject.invalid && (this.clickedSubmit || subject.touched)">
-            <div *ngIf="subject.errors?.['required']">
-                {{this.translation.languagePack.contactpage.errors.required}}
+            <div>
+                <label for="subject">{{this.translation.languagePack.contactpage.content.content}}</label>
+                <textarea id="subject" [(ngModel)] = "user.content" name="subject" placeholder={{this.translation.languagePack.contactpage.content.placeholder}} #subject="ngModel" required></textarea>
+                <div *ngIf="subject.invalid && (this.clickedSubmit || subject.touched)">
+                    <div *ngIf="subject.errors?.['required']">
+                        {{this.translation.languagePack.contactpage.errors.required}}
+                    </div>
+                </div>
             </div>
         </div>
+
         <button *ngIf="!this.didPost" type="submit">{{this.translation.languagePack.contactpage.sendbtnT}}</button>
         <button *ngIf="this.didPost">{{this.translation.languagePack.contactpage.sendbtnS}}</button>
 
