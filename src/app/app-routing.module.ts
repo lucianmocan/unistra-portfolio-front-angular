@@ -8,7 +8,8 @@ import { AccessGuardService } from './access-guard.service';
 const routes: Routes = [
   { path: 'home', component: HomepageComponent },
   { path: 'contact', component: ContactpageComponent},
-  { path: 'check', component: AdminviewComponent, canActivate: [AccessGuardService]},
+  { path: 'check', component: AdminviewComponent,
+  canActivate: [AccessGuardService]},
   { path: '**', component: HomepageComponent }
 ];
 
