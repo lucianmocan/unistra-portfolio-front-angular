@@ -32,8 +32,8 @@
             "email": "Email", 
             "placeholder": "Type your email address here..."
         },
-        "subject": {
-            "subject": "Subject", 
+        "content": {
+            "content": "Message", 
             "placeholder": "Type your message here..."
         },
         "sendbtnT": "Submit",
@@ -43,5 +43,17 @@
             "required": "This box has to be filled.",
             "email": "Incorrect email format." 
         }
+    }, 
+    "adminview": {
+        "search": {
+            "all": "General Search: ", 
+            "id" : "Search by ID"
+        },
+        "buttons": {
+            "search": "Search", 
+            "update": "Update", 
+            "delete": "Delete"
+        },
+        "alert" : "Updated successfully !"
     }
 }

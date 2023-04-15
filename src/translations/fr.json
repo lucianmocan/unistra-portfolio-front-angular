@@ -32,8 +32,8 @@
             "email": "Email", 
             "placeholder": "Votre adresse email ici.."
         },
-        "subject": {
-            "subject": "Sujet", 
+        "content": {
+            "content": "Message", 
             "placeholder": "Écrire votre message.."
         },
         "sendbtnT": "Envoyer",
@@ -43,5 +43,17 @@
             "required": "Merci de remplir cette boîte.",
             "email": "Format d'adresse email incorrect." 
         }
+    },
+    "adminview": {
+        "search": {
+            "all": "Recherche complète : ", 
+            "id" : "Recherche avec ID :"
+        },
+        "buttons": {
+            "search": "Chercher",
+            "update": "Changer", 
+            "delete": "Supprimer"
+        },
+        "alert" : "Mise-à-jour avec succès !"
     }
 }

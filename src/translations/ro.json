@@ -32,8 +32,8 @@
             "email": "Email", 
             "placeholder": "Adresa dumneavoastră email.."
         },
-        "subject": {
-            "subject": "Subiect", 
+        "content": {
+            "content": "Mesaj", 
             "placeholder": "Scrieți mesajul dumneavoastră.."
         },
         "sendbtnT": "Trimite",
@@ -43,5 +43,17 @@
             "required": "Această linie trebuie completată.",
             "email": "Format incorect pentru adresa de email." 
         }
+    }, 
+    "adminview": {
+        "search": {
+            "all": "Căutare genrală :", 
+            "id" : "Caută după ID :"
+        },
+        "buttons": {
+            "search": "Caută",
+            "update": "Schimbă", 
+            "delete": "Șterge"
+        },
+        "alert" : "Actualizat cu succes !"
     }
 }
