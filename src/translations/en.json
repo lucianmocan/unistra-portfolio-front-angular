@@ -26,6 +26,11 @@
             "now":"now", 
             "a":"a", 
             "passion":"passion."
+        },
+        "contact": {
+            "facebook":"Click to visit my Facebook page", 
+            "linkedin":"Click to visit my LinkedIn page", 
+            "gitlab":"Click to visit my Gitlab page"
         }
     },
     "contactpage":{

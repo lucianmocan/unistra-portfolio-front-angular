@@ -26,6 +26,11 @@
             "now":"acum", 
             "a":"o", 
             "passion":"pasiune."
+        }, 
+        "contact": {
+            "facebook":"Apăsați pentru a vizita pagina mea de Facebook", 
+            "linkedin":"Apăsați pentru a vizita pagina mea de LinkedIn", 
+            "gitlab":"Apăsați pentru a vizita profilul meu Gitlab"
         }
     },
     "contactpage":{

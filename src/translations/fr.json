@@ -26,6 +26,11 @@
             "now":"maintenant", 
             "a":"une", 
             "passion":"passion."
+        },
+        "contact": {
+            "facebook":"Cliquer dessus pour aller vers ma page Facebook ", 
+            "linkedin":"Cliquer dessus pour aller vers ma page LinkedIn", 
+            "gitlab":"Cliquer dessus pour aller vers ma page Gitlab"
         }
     },
     "contactpage":{
