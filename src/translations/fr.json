@@ -17,7 +17,16 @@
         "h1": "Qui suis-je ?",
         "p": "Je suis étudiant en 2ème année de Licence Informatique à l'Université de Strasbourg.",
         "btn1": "Mes projets", 
-        "btn2": "Mes hobbys"
+        "btn2": "Mes hobbys", 
+        "large":{
+            "curious":"curiosité",
+            "first":"au début", 
+            "cs":"l'informatique",
+            "is":"est", 
+            "now":"maintenant", 
+            "a":"une", 
+            "passion":"passion."
+        }
     },
     "contactpage":{
         "fname": {

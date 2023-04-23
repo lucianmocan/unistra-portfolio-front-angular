@@ -17,7 +17,16 @@
         "h1": "Who am I ?",
         "p": "I'm a 2nd year student in Computer Science at the University of Strasbourg.",
         "btn1": "My projects", 
-        "btn2": "My hobbies"
+        "btn2": "My hobbies",
+        "large":{
+            "curious":"curiosity",
+            "first":"at first", 
+            "cs":"computer science",
+            "is":"is", 
+            "now":"now", 
+            "a":"a", 
+            "passion":"passion."
+        }
     },
     "contactpage":{
         "fname": {

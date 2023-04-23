@@ -17,7 +17,16 @@
         "h1": "Cine sunt eu?",
         "p": "Sunt student în al doilea an de licență în Informatică la Universitatea din Strasbourg.",
         "btn1": "Proiectele mele", 
-        "btn2": "Pasiunile mele"
+        "btn2": "Pasiunile mele",
+        "large":{
+            "curious":"curiozitate",
+            "first":"la început", 
+            "cs":"informatica",
+            "is":"este", 
+            "now":"acum", 
+            "a":"o", 
+            "passion":"pasiune."
+        }
     },
     "contactpage":{
         "fname": {

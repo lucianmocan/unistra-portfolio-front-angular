@@ -1,6 +1,9 @@
 @import "../../styles.scss";
 
 main {
+    div > section:nth-child(1){
+        display: none;
+    }
     section {
         display: flex;
         flex-direction: column;
@@ -57,6 +60,67 @@ main {
             a {
                 cursor: pointer;
             }
+            a:nth-child(2){
+                margin-left: 0.5rem;
+            }
         }
     }
+}
+
+
+@media (min-width: 1030px) {
+    main div > section:nth-child(1){
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 0;
+        margin-top: 4rem;
+        span {
+            font-size: 2rem;
+            b {
+                font-weight: 100;
+                padding: 0;
+                font-size: 4rem;
+                margin: 0;
+            }
+            i {
+                font-family: $primary_font_family;
+                font-style: normal;
+                color: $primary_text;
+                font-size: 5rem;
+                margin: 0;
+
+            }
+        }
+    }
+    main {
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+        margin-top: 2rem;
+        section {
+            margin-top: 4rem;
+            align-self: start;
+            gap: 2rem;
+            p {
+                width: 20rem;
+            }
+        }
+
+        nav {
+            margin-top: 5rem;
+            section {
+                flex-direction: row;
+                gap: 5rem;
+                justify-content: left;
+                button {
+                    padding: 0.5rem 2.3rem 0.5rem 2.3rem;
+                }
+            }
+            footer {
+                justify-content: left;
+                margin-left: 12.25rem;
+                margin-top: 3rem;
+            }
+        }
+    }   
 }
