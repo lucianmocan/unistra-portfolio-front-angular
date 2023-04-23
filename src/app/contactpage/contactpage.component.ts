@@ -1,9 +1,9 @@
-import { Component, ElementRef, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges, ViewChild } from '@angular/core';
+import { Component, EventEmitter, Input, Output, ViewChild } from '@angular/core';
 import { User } from '../user';
-import { UserService } from '../user.service';
-import { TranslateService } from '../translate.service';
+import { UserService } from '../services/user.service';
+import { TranslateService } from '../services/translate.service';
 import { Router } from '@angular/router';
-import { AccessGuardService } from '../access-guard.service';
+import { AccessGuardService } from '../services/access-guard.service';
 import { NgModel } from '@angular/forms';
 
 @Component({

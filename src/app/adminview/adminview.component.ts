@@ -1,8 +1,7 @@
 import { Component } from '@angular/core';
-import { UserService } from '../user.service';
+import { UserService } from '../services/user.service';
 import { User } from '../user';
-import { AccessGuardService } from '../access-guard.service';
-import { TranslateService } from '../translate.service';
+import { TranslateService } from '../services/translate.service';
 
 class Search {
   value: string;
@@ -20,7 +19,6 @@ class Search {
 })
 export class AdminviewComponent {
   constructor(private userService: UserService, 
-              private accessGuard: AccessGuardService, 
               public translation: TranslateService){}
 
   users : User[] = [];
