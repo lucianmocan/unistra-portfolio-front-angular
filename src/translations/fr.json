@@ -15,7 +15,7 @@
     "homepage":{
         "avatar_alt": "Illustration d'une personne.",
         "h1": "Qui suis-je ?",
-        "p": "Je suis étudiant en 2ème année de Licence Informatique à l'Université de Strasbourg.",
+        "p": "Je suis étudiant en 3ème année de Licence Informatique dans le cadre du parcours Cursus Master en Ingénierie Informatique, Systèmes et Réseaux à l'Université de Strasbourg.",
         "btn1": "Mes projets", 
         "btn2": "Mes hobbys", 
         "large":{
@@ -30,7 +30,8 @@
         "contact": {
             "facebook":"Cliquer dessus pour aller vers ma page Facebook ", 
             "linkedin":"Cliquer dessus pour aller vers ma page LinkedIn", 
-            "gitlab":"Cliquer dessus pour aller vers ma page Gitlab"
+            "gitlab":"Cliquer dessus pour aller vers ma page Gitlab",
+            "github":"Cliquer pour voir mon profile Github"
         }
     },
     "contactpage":{
@@ -56,6 +57,9 @@
             "length": "Champs doit avoir au moins un caractère.",
             "required": "Merci de remplir cette boîte.",
             "email": "Format d'adresse email incorrect." 
+        },
+        "comm":{
+            "bigStatement": "Allons-y, c'est le temps de travailler ensemble."
         }
     },
     "adminview": {

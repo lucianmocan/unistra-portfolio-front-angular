@@ -15,7 +15,7 @@
     "homepage":{
         "avatar_alt": "Illustration of a guy.",
         "h1": "Who am I ?",
-        "p": "I'm a 2nd year student in Computer Science at the University of Strasbourg.",
+        "p": "I'm a 3rd year student in Computer Science at the University of Strasbourg which is part of an Engineering course in Computer Science, Systems and Networks.",
         "btn1": "My projects", 
         "btn2": "My hobbies",
         "large":{
@@ -30,7 +30,8 @@
         "contact": {
             "facebook":"Click to visit my Facebook page", 
             "linkedin":"Click to visit my LinkedIn page", 
-            "gitlab":"Click to visit my Gitlab page"
+            "gitlab":"Click to visit my Gitlab page",
+            "github":"Click to visit my Github profile"
         }
     },
     "contactpage":{
@@ -56,6 +57,9 @@
             "length": "Field should be longer than 1 character.",
             "required": "This box has to be filled.",
             "email": "Incorrect email format." 
+        },
+        "comm": {
+            "bigStatement": "Let's do it, it's the perfect time to work together."
         }
     }, 
     "adminview": {

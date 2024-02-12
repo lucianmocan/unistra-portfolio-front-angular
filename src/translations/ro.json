@@ -15,7 +15,7 @@
     "homepage":{
         "avatar_alt": "Ilustrație a unei persoane.",
         "h1": "Cine sunt eu?",
-        "p": "Sunt student în al doilea an de licență în Informatică la Universitatea din Strasbourg.",
+        "p": "Sunt student în al treilea an de licență în Informatică la Universitatea din Strasbourg, în cadrul parcursului de inginerie în Informatică, Sisteme și rețele.",
         "btn1": "Proiectele mele", 
         "btn2": "Pasiunile mele",
         "large":{
@@ -30,7 +30,8 @@
         "contact": {
             "facebook":"Apăsați pentru a vizita pagina mea de Facebook", 
             "linkedin":"Apăsați pentru a vizita pagina mea de LinkedIn", 
-            "gitlab":"Apăsați pentru a vizita profilul meu Gitlab"
+            "gitlab":"Apăsați pentru a vizita profilul meu Gitlab",
+            "github":"Apăsați pentru a vedea pagina mea de Github"
         }
     },
     "contactpage":{
@@ -56,6 +57,9 @@
             "length": "Acest câmp trebuie să conțină cel puțin un caracter.",
             "required": "Această linie trebuie completată.",
             "email": "Format incorect pentru adresa de email." 
+        },
+        "comm":{
+            "bigStatement": "Haide să lucrăm împreună."
         }
     }, 
     "adminview": {
