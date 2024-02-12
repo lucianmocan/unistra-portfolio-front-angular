@@ -29,8 +29,11 @@
                     {{this.translation.languagePack.navbar.menu.list.home}}
                 </li>
                 <li>{{this.translation.languagePack.navbar.menu.list.projects}}</li>
-                <li>{{this.translation.languagePack.navbar.menu.list.edxp}}</li>
-                <li>{{this.translation.languagePack.navbar.menu.list.passions}}</li>
+                <li routerLink="/parcours"
+                routerLinkActive="active"
+                ariaCurrentWhenActive="page">
+                {{this.translation.languagePack.navbar.menu.list.edxp}}</li>
+                <!-- <li>{{this.translation.languagePack.navbar.menu.list.passions}}</li> -->
                 <li routerLink="/contact" 
                     routerLinkActive="active" 
                     ariaCurrentWhenActive="page">

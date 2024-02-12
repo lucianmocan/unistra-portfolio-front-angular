@@ -9,6 +9,7 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { ContactpageComponent } from './contactpage/contactpage.component';
 import { FormsModule } from '@angular/forms';
 import { AdminviewComponent } from './adminview/adminview.component';
+import { ParcoursComponent } from './parcours/parcours.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { AdminviewComponent } from './adminview/adminview.component';
     NavBarComponent,
     HomepageComponent,
     ContactpageComponent,
-    AdminviewComponent
+    AdminviewComponent,
+    ParcoursComponent
   ],
   imports: [
     BrowserModule,
