@@ -1,0 +1,32 @@
+@import "../../styles.scss";
+
+main {
+    margin-left: 3rem;
+    margin-right: 3rem;
+    display: flex;
+    div {
+        padding: 2rem;
+        p {
+            font-family: $secondary_font_family;
+            text-align: justify;
+            text-indent: 25px;
+        }
+        img {
+            padding: 1rem;
+        }
+        div {
+            text-align: center;
+            p {
+                text-align: center;
+                font-size: small;
+                text-indent: 0;
+            }
+        }
+    }
+}
+
+#ici {
+    margin-top: -5rem;
+    display: flex;
+    flex-direction: row;
+}
