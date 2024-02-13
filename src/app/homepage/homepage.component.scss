@@ -50,6 +50,9 @@ main {
                 font-size: 1.8rem;
                 border: none;
             }
+            button:hover {
+                box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);;
+            }
         }
         footer {
             margin-top: 2rem;
@@ -118,9 +121,18 @@ main {
             }
             footer {
                 justify-content: left;
-                margin-left: 10.25rem;
+                margin-left: 4.65rem;
                 margin-top: 3rem;
             }
         }
     }   
+}
+
+#github {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.6rem;
+    color: inherit;
 }

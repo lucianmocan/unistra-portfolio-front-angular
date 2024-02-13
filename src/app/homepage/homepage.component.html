@@ -13,8 +13,8 @@
         </section>
         <nav>
             <section>
-                <button>{{this.translation.languagePack.homepage.btn1}}</button>
-                <button>{{this.translation.languagePack.homepage.btn2}}</button>
+                <button routerLink="/edex">{{this.translation.languagePack.homepage.btn1}}</button>
+                <button routerLink="/contact">{{this.translation.languagePack.homepage.btn2}}</button>
             </section>
             <footer>
                 <a href="#">
@@ -26,8 +26,9 @@
                 <a href="https://git.unistra.fr/lmocan">
                     <img src="assets/icons/gitlab-logo-500.png" alt={{this.translation.languagePack.homepage.contact.gitlab}}  height="35px" width="35px">
                 </a>
-                <a href="https://github.com/lucianmocan">
+                <a id="github" href="https://github.com/lucianmocan">
                     <img src="assets/icons/github-mark.png" alt={{this.translation.languagePack.homepage.contact.github}} height="35px" width="35px">
+                    <p>{{this.translation.languagePack.homepage.contact.github_explain}}</p>
                 </a>
             </footer>
         </nav>
