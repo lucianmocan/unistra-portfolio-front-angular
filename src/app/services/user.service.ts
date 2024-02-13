@@ -7,7 +7,7 @@ import { User } from '../user';
   providedIn: 'root'
 })
 export class UserService {
-  private userUrl = 'http://localhost:8000/';
+  private userUrl = 'http://localhost:8000/api';
   private addUserUrl = this.userUrl + "addcontact.php";
   private getUsersUrl = this.userUrl + "getcontacts.php";
   private deleteUsersUrl = this.userUrl + "deletecontact.php";
