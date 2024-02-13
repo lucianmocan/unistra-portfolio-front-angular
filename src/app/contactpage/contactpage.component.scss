@@ -1,9 +1,17 @@
 @import "../../styles.scss";
 main {
-    margin-top: 1rem;
     margin-bottom: 1rem;
     display: flex;
     flex-direction: column;
+    div {
+        img {
+            width: 60%;
+            margin-bottom: 2rem;
+        }
+        h1 {
+            padding: 1rem;
+        }
+    }
     form {
         flex-grow: 2;
         z-index: 0;

@@ -1,9 +1,10 @@
 @import "../../styles.scss";
 
 main {
-    margin-left: 3rem;
-    margin-right: 3rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
     display: flex;
+    flex-direction: column;
     div {
         padding: 2rem;
         p {
@@ -24,9 +25,19 @@ main {
         }
     }
 }
+#pres {
+    width: 90%;
+}
 
+@media (min-width: 1030px){
+    main {
+        margin-left: 3rem;
+        margin-right: 3rem;
+        flex-direction: row;
+    }
 #ici {
     margin-top: -5rem;
     display: flex;
     flex-direction: row;
+}
 }

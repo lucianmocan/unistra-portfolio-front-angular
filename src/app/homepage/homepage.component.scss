@@ -55,6 +55,7 @@ main {
             }
         }
         footer {
+            margin-left: 2rem;
             margin-top: 2rem;
             display: flex;
             gap: 1rem;
@@ -62,6 +63,9 @@ main {
             align-items: center;
             a {
                 cursor: pointer;
+                p {
+                    width: 60%;
+                }
             }
             a:nth-child(2){
                 margin-left: 0.5rem;
