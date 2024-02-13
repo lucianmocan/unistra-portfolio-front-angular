@@ -1,22 +1,17 @@
-# lucian
+# Front-end for a web programming project - personal portfolio
 
-Partie front du site-web.
+This website's front-end was done as part of a web programming project during my second year of Bachelor in Computer Science at the University of Strasbourg. (Programmation Web 2, L2S4).
+The front-end part is done in *Angular*. 
 
-POST - sur la vue `contactpage`\
-GET, POST - sur la vue `adminview` - pour y accéder il faut remplir le formulaire de contact de la manière suivante (la route c'est /check; mais j'ai mis une guarde `[canActivate]` qui ne permet pas d'y accéder si cela n'est pas fait à travers le formulaire) : \
+### It consists of 4 important parts :
+- navigation bar : it allows the user to change the language for everything, including the photos, icons alt description... except for the view history/edex view of which I have yet to make a translation.
+- homepage view : it shortly says who I am and it displays a phrase that I found interesting at the time... it allows links towards my socials : LinkedIn, Github, Gitlab...
+- history/edex view : it's quite a long description, in a not very formal style, about who I am...
+- contact view : allows for a visitor to leave a feedback, or to try and get in touch with me...
+- administrator view : allows me to see the feedbacks left by the users (probably not the best idea to have this deployed with the site... maybe it should only work on local.
+
 `Prénom : Lucian`\
 `Nom : Mocan`\
 `Email : check@submit.com`\
 `Message : (laisser le champs vide, c'est le seul cas où ça marche).`
-
-Pas de vues pour les pages Projets, Parcours, Passions. Ça demandait encore plus de travail.\
-Validation de formulaire avec Angular dans le document HTML.
-
-# ProgwebFrontAngular
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.4.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
