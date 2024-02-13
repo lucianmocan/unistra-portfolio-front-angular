@@ -6,7 +6,7 @@
             "list":{
                 "home": "Acasă", 
                 "projects": "Proiecte", 
-                "edxp": "Parcurs",
+                "edxp": "Povestea mea",
                 "passions": "Pasiuni",
                 "contact": "Contact"
             }
@@ -16,8 +16,8 @@
         "avatar_alt": "Ilustrație a unei persoane.",
         "h1": "Cine sunt eu?",
         "p": "Sunt student în al treilea an de licență în Informatică la Universitatea din Strasbourg, în cadrul parcursului de inginerie în Informatică, Sisteme și rețele.",
-        "btn1": "Proiectele mele", 
-        "btn2": "Pasiunile mele",
+        "btn1": "Povestea mea", 
+        "btn2": "Contactează-mă",
         "large":{
             "curious":"curiozitate",
             "first":"la început", 
@@ -31,7 +31,9 @@
             "facebook":"Apăsați pentru a vizita pagina mea de Facebook", 
             "linkedin":"Apăsați pentru a vizita pagina mea de LinkedIn", 
             "gitlab":"Apăsați pentru a vizita profilul meu Gitlab",
-            "github":"Apăsați pentru a vedea pagina mea de Github"
+            "github":"Apăsați pentru a vedea pagina mea de Github",
+            "github_explain": "Vezi proiectele mele pe Github"
+
         }
     },
     "contactpage":{

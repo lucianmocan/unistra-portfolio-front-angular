@@ -6,7 +6,7 @@
             "list":{
                 "home": "Accueil", 
                 "projects": "Projets", 
-                "edxp": "Parcours",
+                "edxp": "Histoire",
                 "passions": "Passions",
                 "contact": "Contact"
             }
@@ -16,8 +16,8 @@
         "avatar_alt": "Illustration d'une personne.",
         "h1": "Qui suis-je ?",
         "p": "Je suis étudiant en 3ème année de Licence Informatique dans le cadre du parcours Cursus Master en Ingénierie Informatique, Systèmes et Réseaux à l'Université de Strasbourg.",
-        "btn1": "Mes projets", 
-        "btn2": "Mes hobbys", 
+        "btn1": "Mon histoire", 
+        "btn2": "Contacte-moi", 
         "large":{
             "curious":"curiosité",
             "first":"au début", 
@@ -31,7 +31,9 @@
             "facebook":"Cliquer dessus pour aller vers ma page Facebook ", 
             "linkedin":"Cliquer dessus pour aller vers ma page LinkedIn", 
             "gitlab":"Cliquer dessus pour aller vers ma page Gitlab",
-            "github":"Cliquer pour voir mon profile Github"
+            "github":"Cliquer pour voir mon profile Github",
+            "github_explain": "Regarder mes projets sur Github"
+
         }
     },
     "contactpage":{

@@ -6,7 +6,7 @@
             "list":{
                 "home": "Home", 
                 "projects": "Projects", 
-                "edxp": "Career",
+                "edxp": "History",
                 "passions": "Passions",
                 "contact": "Contact"
             }
@@ -16,8 +16,8 @@
         "avatar_alt": "Illustration of a guy.",
         "h1": "Who am I ?",
         "p": "I'm a 3rd year student in Computer Science at the University of Strasbourg which is part of an Engineering course in Computer Science, Systems and Networks.",
-        "btn1": "My projects", 
-        "btn2": "My hobbies",
+        "btn1": "Short history", 
+        "btn2": "Let's link up",
         "large":{
             "curious":"curiosity",
             "first":"at first", 
@@ -31,7 +31,8 @@
             "facebook":"Click to visit my Facebook page", 
             "linkedin":"Click to visit my LinkedIn page", 
             "gitlab":"Click to visit my Gitlab page",
-            "github":"Click to visit my Github profile"
+            "github":"Click to visit my Github profile",
+            "github_explain": "Check out my projects on Github"
         }
     },
     "contactpage":{
