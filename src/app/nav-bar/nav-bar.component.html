@@ -14,7 +14,9 @@
             </a>
         </ul>
     <div>
-        <img src="assets/logo_my/lucian-logos.png" alt={{this.translation.languagePack.navbar.logo_alt}}>
+        <a routerLink="/home">
+            <img src="assets/logo_my/lucian-logos.png" alt={{this.translation.languagePack.navbar.logo_alt}}>
+        </a>
     </div>
     <nav (mouseleave)="hideMenuOnMouseLeave($event)"
          (mouseenter)="showMenuOnMouseEnter($event)"
@@ -28,8 +30,8 @@
                     ariaCurrentWhenActive="page">
                     {{this.translation.languagePack.navbar.menu.list.home}}
                 </li>
-                <li>{{this.translation.languagePack.navbar.menu.list.projects}}</li>
-                <li routerLink="/parcours"
+                <!-- <li>{{this.translation.languagePack.navbar.menu.list.projects}}</li> -->
+                <li routerLink="/edex"
                 routerLinkActive="active"
                 ariaCurrentWhenActive="page">
                 {{this.translation.languagePack.navbar.menu.list.edxp}}</li>
