@@ -9,7 +9,7 @@ import { ParcoursComponent } from './parcours/parcours.component';
 const routes: Routes = [
   { path: 'home', component: HomepageComponent },
   { path: 'contact', component: ContactpageComponent},
-  { path: 'parcours', component: ParcoursComponent},
+  { path: 'edex', component: ParcoursComponent},
   { path: 'check', component: AdminviewComponent,
   canActivate: [AccessGuardService]},
   { path: '**', component: HomepageComponent }
