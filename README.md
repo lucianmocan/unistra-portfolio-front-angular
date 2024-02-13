@@ -10,7 +10,8 @@ The front-end part is done in *Angular*.
 - contact view : allows for a visitor to leave a feedback, or to try and get in touch with me...
 - administrator view : allows me to see the feedbacks left by the users (probably not the best idea to have this deployed with the site... maybe it should only work on local.
 
-#### The back-end is not hosted anywhere so, the contact form will not send anything.
+#### The back-end is not hosted anywhere so, the contact form will not send anything. 
+If you want to check it out, here it is: https://github.com/lucianmocan/unistra-portfolio-back-php
 #### To access the admin view (even if it's completely useless without the backend and database) use the following credentials : 
 Prénom : Lucian\
 Nom : Mocan\
